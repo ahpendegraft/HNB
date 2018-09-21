@@ -7,4 +7,4 @@ Author: Nengjun Yi nyi@uab.edu
 
 Maintainer: Nengjun Yi nyi@uab.edu
 
-Please email Amanda 
+Please contact Amanda H Pendegraft at alhall91@uab.edu with any questions regarding the simulation and the application of the HNB tutorial.
