@@ -11,9 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Installation and usage
 
-The BhGLM package can be accessed at <https://github.com/nyiuab/BhGLM>.  After downloading BhGLM_1.1.0.zip, the source code can be installed on your local machine.
+The BhGLM package can be accessed at <https://github.com/nyiuab/BhGLM>. You can install the package with `devtools` package as
 
+```{r eval=F}
+if(!require(devtools)) install.packages("devtools")
+library(devtools)
+install_github("nyiuab/BhGLM")
 ```
+
+After downloading BhGLM_1.1.0.zip, the source code can be installed on your local machine.
+
+```{r eval=F}
 setwd()
 install.packages("BhGLM_1.1.0.zip", repos=NULL)
 library(BhGLM)
@@ -21,7 +29,7 @@ library(BhGLM)
 
 The Bayesian hierarchical negative binomial (HNB) model utilized in this tutorial depends on the function bglm.
 
-```
+```{r eval=F}
 bglm(formula, family = gaussian, data, offset, weights, subset, na.action, 
     start = NULL, etastart, mustart, control = glm.control(epsilon = 1e-04, maxit = 50), 
     prior = c("de", "t", "mde", "mt"), group = NULL, method.coef,
@@ -50,7 +58,7 @@ The arguments of bglm are explained as follows.
 
 In order to assess the performance and the behavior of the HNB model, the following R code was employed.  The function glm.nb implemented in the R package MASS was utilized as a means of comparison. 
 
-```
+```{r eval=F}
 ################  Simulation of High Dimensional Microbiome ####################
 ########### Comparison of glm.nb() and bglm() Modeling Techniques ##############
 
@@ -216,7 +224,7 @@ rm(list=ls())
 
 An application of the HNB model was completed using the open-source, open-access data published by the American Gut Project at <ftp://ftp.microbio.me/AmericanGut/latest/11-packaged.zip>.  The following R code was employed to analysis those patients who self-reported diagnosis of inflammatory bowel disease (IBD) by a medical professional compared to those patients who self-reported no diagnosis of inflammatory bowel disease (IBD) while adjusting for a high-dimensional set of demographic, dietary, and systemic covariates. 
 
-```
+```{r eval=F}
 ###################  Application to American Gut Project #######################
 ################################ IBD Subset ####################################
 
